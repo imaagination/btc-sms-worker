@@ -1,0 +1,10 @@
+runtime "ruby"
+
+name "IronTexter"
+
+exec "iron_texter.rb"
+
+file "../config/settings.yml"
+
+gem "twilio-ruby"
+gem "json"
