@@ -6,5 +6,6 @@ exec "iron_texter.rb"
 
 file "../config/settings.yml"
 
+full_remote_build true
 gem "twilio-ruby"
 gem "json"
