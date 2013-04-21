@@ -12,7 +12,5 @@ config = YAML.load_file("settings.yml")
 @client.account.sms.messages.create(
 	:from => config['twilio']['phone_number'],
 	:to => @payload["destination"],
-	:body => "BTC traded at #{@payload["price"]} which is \
-		#{@payload["alert_when"].downcase} your threshold \
-		of #{@payload["threshold"]}."
+	:body => "BTC traded at #{@payload["price"]} which is #{@payload["alert_when"].downcase} your threshold of #{@payload["threshold"]}."
 )
