@@ -6,7 +6,7 @@ require 'json'
 
 # Load configuration
 config = YAML.load_file("settings.yml")
-@client = Twilio::Rest::Client.new config['twilio']['account_sid'] config['twilio']['auth_token']
+@client = Twilio::Rest::Client.new(config['twilio']['account_sid'], config['twilio']['auth_token'])
 
 # Send SMS
 @client.account.sms.messages.create(
